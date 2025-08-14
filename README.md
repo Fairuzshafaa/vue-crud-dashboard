@@ -5,28 +5,37 @@ Menggunakan **Vue 3**, **Vuex** untuk state, **vue-router** untuk routing, **moc
 serta **design tokens (CSS variables)** agar tampilan konsisten tanpa hardcode.
 
 ## Tech Stack
+
 - Vue 3 + Vue CLI (cli-service 5.x)
 - Vuex 4 (state login, data dashboard)
 - Vue Router 4 (routing + route guard)
 - CSS variables untuk design tokens
 
 ## Menjalankan
+
 ```bash
-npm install
+vue create vue-crud-dashboard
+cd vue-crud-dashboard
+npm install -g @vue/cli
 npm run serve
+
 ```
+
 Buka `http://localhost:8080`
 
 ## Build Production
+
 ```bash
 npm run build
 ```
 
 ## Akun Uji (mock)
+
 - **Email**: `karthi@gmmail.com`
 - **Password**: `123456`
 
 ## Struktur
+
 ```
 src/
   assets/ (tokens.css, base.css, avatar.jpg)
@@ -38,6 +47,10 @@ src/
 ```
 
 ## Catatan
+
 - Route guard mencegah akses ke Dashboard jika belum login.
 - Desain dapat disesuaikan lewat `src/assets/tokens.css`.
+
+```
+
 ```
