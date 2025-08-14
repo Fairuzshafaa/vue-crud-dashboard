@@ -1,0 +1,29 @@
+:root {
+  --bg: #ffffff;
+  --sidebar-bg: #efe4d6;
+  --sidebar-active: #f6b71d;
+  --text: #222222;
+  --muted: #8a8a8a;
+  --card-students: #e9f2ff;
+  --card-courses: #fde9f3;
+  --card-payments: #fff7e3;
+  --card-users: linear-gradient(90deg, #ffb62a, #f0a318);
+  --white: #fff;
+  --border: #eeeeee;
+  --ff: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --h1: 28px;
+  --h2: 22px;
+  --body: 14px;
+  --small: 12px;
+  --weight-bold: 700;
+  --weight-medium: 600;
+  --weight-regular: 500;
+  --space-1: 6px;
+  --space-2: 10px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 12px;
+  --radius-lg: 16px;
+  --shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}

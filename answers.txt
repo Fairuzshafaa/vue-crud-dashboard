@@ -1,0 +1,27 @@
+Pertanyaan Pendukung
+
+1) Bagaimana Vuex membantu dalam mengelola state aplikasi ini?
+   - Vuex menyimpan state global: status login (auth.user) dan data dashboard (stats, users).
+     Komponen (Login, Dashboard, Sidebar, UsersTable) cukup membaca dari getters dan memicu actions
+     (login, logout, add/update/delete user) tanpa perlu mengoper props/emit berantai. Ini membuat alur
+     data tunggal dan prediktabel.
+
+2) Apa yang Anda lakukan untuk mencegah akses ke Dashboard tanpa login?
+   - Menggunakan route guard (router.beforeEach). Jika route memiliki meta `requiresAuth` dan
+     getter `auth/isLoggedIn` bernilai false, user diarahkan ke `/login`. Jika user sudah login dan
+     membuka `/login`, diarahkan ke `/`.
+
+3) Komponen apa saja yang dibuat reusable dan apa alasannya?
+   - Sidebar: panel navigasi dan profil; terpisah agar mudah dipakai di halaman lain.
+   - StatCard: kartu statistik dengan props `icon`, `title`, `value`, `bg/gradient`.
+   - UsersTable: tabel daftar user dengan emit `edit` dan `delete`.
+   - Reusability mengurangi duplikasi dan mempermudah maintenance.
+
+4) Lifecycle hook apa yang digunakan dan untuk keperluan apa?
+   - Saat ini halaman tidak membutuhkan panggilan API, sehingga hook eksplisit tidak krusial.
+     Namun pattern siap pakai adalah `onMounted()` di Dashboard bila nanti perlu load data async.
+     Untuk mock data, data diambil dari Vuex getters secara reaktif.
+
+5) Jika aplikasi ini akan dideploy ke production, langkah build apa yang dilakukan?
+   - Jalankan `npm run build` (Vue CLI) untuk menghasilkan bundle production di folder `dist/`.
+     Hasilnya dapat di-deploy ke static hosting (Nginx, Netlify, Vercel, S3 + CloudFront, dsb).

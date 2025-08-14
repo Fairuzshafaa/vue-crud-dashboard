@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--ff);
+  color: var(--text);
+  background: var(--bg);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.input,
+.btn {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0 14px;
+  font-size: var(--body);
+}
+.btn {
+  background: var(--sidebar-active);
+  color: #111;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.grid {
+  display: grid;
+  gap: var(--space-3);
+}
+.flex {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+table {
+  border-collapse: collapse;
+}
