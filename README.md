@@ -13,13 +13,16 @@ serta **design tokens (CSS variables)** agar tampilan konsisten tanpa hardcode.
 
 ## Menjalankan
 
-```bash
+````bash
 vue create vue-crud-dashboard
 cd vue-crud-dashboard
 npm install -g @vue/cli
 npm run serve
-
-```
+```for running this app
+git clone https://github.com/Fairuzshafaa/vue-crud-dashboard.git
+cd vue-crud-dashboard
+npm install
+npm run serve
 
 Buka `http://localhost:8080`
 
@@ -27,7 +30,7 @@ Buka `http://localhost:8080`
 
 ```bash
 npm run build
-```
+````
 
 ## Akun Uji (mock)
 
